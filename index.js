@@ -8,9 +8,9 @@ console.log("Let's begin!!");
 
 console.log("--------------------------------------");
 
-function play(question , answer)
+function play(question , answer) //function for iterating questions with answers
 {
-  var userAnswer = readlineSync.question(question);
+  var userAnswer = readlineSync.question(question); //user's answer
 
   if(userAnswer === answer)
   {
@@ -42,7 +42,18 @@ var questions = [{
 {
   ques : "Which is my favourite superhero?",
   ans :  "batman"
-}]
+},
+
+{
+  ques : "Which is my favourite sport?",
+  ans :  "football"
+},
+
+{
+  ques : "What is my favourite destination?",
+  ans :  "barcelona"
+}
+]
 
 for(var i=0;i<questions.length;i++)
 {
@@ -55,11 +66,11 @@ console.log(" ")
 if(score === 0)
 console.log("Bad luck, try again!")
 
-else if(score>0 && score<3)
+else if(score>0 && score<4)
 console.log("Hmmm "+score+ "! Not bad")
 
-else if(score === 3)
-console.log("Cool!! "+score+ " out of 4. You sure are an enthusiast!")
+else if(score>=4 && score<6)
+console.log("Cool!! "+score+ " out of 6. You sure are an enthusiast!")
 
 else
-console.log("PERFECT!! 4 outa 4 Way to go!!")
+console.log("PERFECT!! 6 outa 6 Way to go!!")
